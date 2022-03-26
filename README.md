@@ -5,7 +5,7 @@
 1. Download the repo and open it in Xcode
 2. Install required dependencies if required
 3. Set the below constants to their appropriate values (line 613):
-```
+```swift
     let INPUT_TRX_ID = "d5832b04d8b3ffd871ef6da739de56f5d8408b6a161d61a19974106f40ef382d"
     let INPUT_BALANCE = UInt64(100000)
     let INPUT_INDEX = UInt32(0x0)
