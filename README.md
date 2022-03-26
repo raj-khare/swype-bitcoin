@@ -1,5 +1,5 @@
 # Swype bitcoin
-### Create raw P2PKH Segwit transactions purely on client
+### Create a raw P2WPKH Segwit transaction purely on client
 
 ### Steps:
 1. Download the repo and open it in Xcode
