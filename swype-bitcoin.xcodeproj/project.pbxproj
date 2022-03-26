@@ -11,6 +11,9 @@
 		3528374227EA564700EE68FC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3528374127EA564700EE68FC /* ContentView.swift */; };
 		3528374427EA564800EE68FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3528374327EA564800EE68FC /* Assets.xcassets */; };
 		3528374727EA564800EE68FC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3528374627EA564800EE68FC /* Preview Assets.xcassets */; };
+		3528375227EA576800EE68FC /* CryptoSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3528375127EA576800EE68FC /* CryptoSwift */; };
+		3546281A27EE3D01004389D6 /* secp256k1 in Frameworks */ = {isa = PBXBuildFile; productRef = 3546281927EE3D01004389D6 /* secp256k1 */; };
+		35764CBE27EDA24A00074594 /* Bech32 in Frameworks */ = {isa = PBXBuildFile; productRef = 35764CBD27EDA24A00074594 /* Bech32 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3546281A27EE3D01004389D6 /* secp256k1 in Frameworks */,
+				35764CBE27EDA24A00074594 /* Bech32 in Frameworks */,
+				3528375227EA576800EE68FC /* CryptoSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +89,11 @@
 			dependencies = (
 			);
 			name = "swype-bitcoin";
+			packageProductDependencies = (
+				3528375127EA576800EE68FC /* CryptoSwift */,
+				35764CBD27EDA24A00074594 /* Bech32 */,
+				3546281927EE3D01004389D6 /* secp256k1 */,
+			);
 			productName = "swype-bitcoin";
 			productReference = 3528373C27EA564700EE68FC /* swype-bitcoin.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +122,11 @@
 				Base,
 			);
 			mainGroup = 3528373327EA564700EE68FC;
+			packageReferences = (
+				3528375027EA576800EE68FC /* XCRemoteSwiftPackageReference "CryptoSwift" */,
+				35764CBC27EDA24A00074594 /* XCRemoteSwiftPackageReference "Bech32" */,
+				3546281827EE3D01004389D6 /* XCRemoteSwiftPackageReference "secp256k1" */,
+			);
 			productRefGroup = 3528373D27EA564700EE68FC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -339,6 +355,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3528375027EA576800EE68FC /* XCRemoteSwiftPackageReference "CryptoSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/krzyzanowskim/CryptoSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		3546281827EE3D01004389D6 /* XCRemoteSwiftPackageReference "secp256k1" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/GigaBitcoin/secp256k1.swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.5.0;
+			};
+		};
+		35764CBC27EDA24A00074594 /* XCRemoteSwiftPackageReference "Bech32" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/0xDEADP00L/Bech32";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3528375127EA576800EE68FC /* CryptoSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3528375027EA576800EE68FC /* XCRemoteSwiftPackageReference "CryptoSwift" */;
+			productName = CryptoSwift;
+		};
+		3546281927EE3D01004389D6 /* secp256k1 */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3546281827EE3D01004389D6 /* XCRemoteSwiftPackageReference "secp256k1" */;
+			productName = secp256k1;
+		};
+		35764CBD27EDA24A00074594 /* Bech32 */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 35764CBC27EDA24A00074594 /* XCRemoteSwiftPackageReference "Bech32" */;
+			productName = Bech32;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3528373427EA564700EE68FC /* Project object */;
 }
